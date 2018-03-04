@@ -122,6 +122,7 @@ div.subtitle {
 }
 
 #navbtnblock {
+<<<<<<< HEAD
     padding: 0.5em 1em 0.5em 1em;
     background-color: white;
 }
@@ -143,6 +144,22 @@ div.subtitle {
 }
 
 
+=======
+
+    padding: 0.5em 1em 0.5em 1em;
+
+}
+
+#navbtnblock a{
+    font-weight: normal;
+    margin: .4em;
+    padding-left: .5em;
+    padding-right: .5em;
+    background-color: #fff;
+    color: #222;
+}
+
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
 div.books {
     display: flex;
     flex-direction: row;
@@ -243,7 +260,11 @@ div.text {
     font-size: 12pt;
 }
 
+<<<<<<< HEAD
 .scripturewrapper{
+=======
+.scripturewrapper {
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
     position: absolute;
     min-height: 100%;
     max-height: 100%;
@@ -256,8 +277,11 @@ div.text {
     padding-bottom: 3rem;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
 div.chapterheading {
     font-size: 14pt;
     font-weight: bold;
@@ -330,6 +354,7 @@ span.verse {
 li.match {
     background-color: #ffffcc;
 }
+<<<<<<< HEAD
 
 
 @media only screen and (max-width: 600px){
@@ -372,3 +397,5 @@ li.match {
     }
     
 }
+=======
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170

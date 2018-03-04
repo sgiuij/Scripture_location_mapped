@@ -1,6 +1,7 @@
 /* global window */
 /* jslint browser: true */
 const Scriptures = (function (){
+<<<<<<< HEAD
     "use strict";
     //constants
     const SCRIPTURE_URL = "http://scriptures.byu.edu/mapscrip/mapgetscrip.php";
@@ -40,6 +41,48 @@ const Scriptures = (function (){
     let showAllMarkers;
     let setupMarkers;
     let decodeScriptureUrlParameters;
+=======
+ "use strict";
+//constants
+const SCRIPTURE_URL = "http://scriptures.byu.edu/mapscrip/mapgetscrip.php";
+const LAT_LON_PARSER = /\((.*),'(.*)',(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*)\)/;
+const MAX_RETRY_DELAY = 5000;
+// private variables
+let books = {};
+let volumes = [];
+
+let labels = [];
+let retryDelay = 500;
+let markerLocations = [];
+// AIzaSyBVrFz6pyVtooI7emyrRWUDVi3tcCJMysY
+// private method declarations
+let addMarker;
+let breadcrumbs;
+let clearMarkers;
+let ajax;
+let bookChapterValid;
+let cacheBooks;
+let init;
+let iflocationfree;
+let navigateBook;
+let navigateChapter;
+let navigateHome;
+let onHashChanged;
+let encodedScriptureUrlParameters;
+let getScriptureCallback;
+let getScriptureFailed;
+let hash;
+let previousChapter;
+let nextChapter;
+let previousNextChapterBtn;
+let titleForBookChapter;
+let showLocation;
+let zoomOneLocation;
+let showAllMarkers;
+let setupMarkers;
+let decodeScriptureUrlParameters;
+
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
 // private methods
 	addMarker = function (placename, latitude, longitude, altitude){
 		//TODO: check if already a marker exists here
@@ -206,7 +249,11 @@ const Scriptures = (function (){
             let previousChapterId = previousChapterInfo[1];
             let previousChapterName = previousChapterInfo[2];
             let prevousChapterHash = "#" + volumeId + ":" + previousBookId + ":" + previousChapterId;
+<<<<<<< HEAD
             let prevousBtnHtml = "<a class=\"btn\" id=\"previousChapterBtn\" onclick=\"javascript:slideChapters()\" href=" + prevousChapterHash + ">" + previousChapterName +"</a>";
+=======
+            let prevousBtnHtml = "<a class=\"btn\" id=\"previousChapterBtn\" href=" + prevousChapterHash + ">" + previousChapterName +"</a>";
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
             preNavHtml += prevousBtnHtml;
             
         } 
@@ -217,7 +264,11 @@ const Scriptures = (function (){
             let nextChapterId = nextChapterInfo[1];
             let nextChapterName = nextChapterInfo[2];
             let nextChapterHash = "#" + volumeId + ":" + nextBookId + ":" + nextChapterId;
+<<<<<<< HEAD
             let nextBtnHtml = "<a class=\"btn\" id=\"nextChapterBtn\" onclick=\"javascript:slideChapters()\" href=" + nextChapterHash + ">" + nextChapterName + "</a>";
+=======
+            let nextBtnHtml = "<a class=\"btn\" id=\"nextChapterBtn\" href=" + nextChapterHash + ">" + nextChapterName + "</a>";
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
             preNavHtml += nextBtnHtml;
             
         }
@@ -234,10 +285,16 @@ const Scriptures = (function (){
                 navigateChapter(nextChapterInfo[0],nextChapterInfo[1]);
             });
         }
+<<<<<<< HEAD
     };
 
     
     
+=======
+        
+    };
+
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
     getScriptureCallback = function(chapterHtml){  
         previousNextChapterBtn();
         document.getElementById("scriptures").innerHTML += chapterHtml;
@@ -338,7 +395,10 @@ const Scriptures = (function (){
     		}
     	})
     	navContents += "<br /><br /></div>";
+<<<<<<< HEAD
 
+=======
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
     	document.getElementById("scriptures").innerHTML = navContents;
         document.getElementById("crumb").innerHTML = breadcrumbs(displayedVolume);
     };
@@ -506,6 +566,7 @@ showLocation = function(geotagId, placename, latitude, longitude,
     console.log("new location")
     Scriptures.showLocation(geotagId, placename, latitude, longitude, 
         viewLatitude, viewLongitude, viewTilt, viewRoll, viewAltitude, viewHeading);
+<<<<<<< HEAD
 }
 
 let slideChapters;
@@ -515,3 +576,6 @@ slideChapters = function(){
 
 
 }
+=======
+}
+>>>>>>> b77e073c73de3268c40647363291bbcb2dd49170
